@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPMainViewController : UIViewController
+@interface SPMainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, weak) IBOutlet UITableView *tblView;
 
 @end

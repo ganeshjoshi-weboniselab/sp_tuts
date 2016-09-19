@@ -14,6 +14,7 @@
 		F1509AD21D891FA0007AAAFB /* SPTuts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1509AD01D891FA0007AAAFB /* SPTuts.xcdatamodeld */; };
 		F1509AD41D891FA0007AAAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1509AD31D891FA0007AAAFB /* Assets.xcassets */; };
 		F1509AD71D891FA0007AAAFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1509AD51D891FA0007AAAFB /* LaunchScreen.storyboard */; };
+		F1684CE41D8FE703003A5B27 /* SPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1684CE31D8FE703003A5B27 /* SPMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		F1509AD31D891FA0007AAAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1509AD61D891FA0007AAAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1509AD81D891FA0007AAAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1684CE11D8FE703003A5B27 /* SPTuts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPTuts-Bridging-Header.h"; sourceTree = "<group>"; };
+		F1684CE21D8FE703003A5B27 /* SPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMainViewController.h; sourceTree = "<group>"; };
+		F1684CE31D8FE703003A5B27 /* SPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +86,14 @@
 			children = (
 				F1509AC91D891FA0007AAAFB /* AppDelegate.swift */,
 				F1509ACB1D891FA0007AAAFB /* ViewController.swift */,
+				F1684CE21D8FE703003A5B27 /* SPMainViewController.h */,
+				F1684CE31D8FE703003A5B27 /* SPMainViewController.m */,
 				F1509ACD1D891FA0007AAAFB /* Main.storyboard */,
 				F1509AD31D891FA0007AAAFB /* Assets.xcassets */,
 				F1509AD51D891FA0007AAAFB /* LaunchScreen.storyboard */,
 				F1509AD81D891FA0007AAAFB /* Info.plist */,
 				F1509AD01D891FA0007AAAFB /* SPTuts.xcdatamodeld */,
+				F1684CE11D8FE703003A5B27 /* SPTuts-Bridging-Header.h */,
 			);
 			path = SPTuts;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1684CE41D8FE703003A5B27 /* SPMainViewController.m in Sources */,
 				F1509ACC1D891FA0007AAAFB /* ViewController.swift in Sources */,
 				F1509ACA1D891FA0007AAAFB /* AppDelegate.swift in Sources */,
 				F1509AD21D891FA0007AAAFB /* SPTuts.xcdatamodeld in Sources */,
@@ -331,10 +339,13 @@
 			baseConfigurationReference = 46EDE9C366F3CB62781B49DB /* Pods-SPTuts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SPTuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.webonise.-SPTuts.SPTuts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SPTuts/SPTuts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -343,10 +354,12 @@
 			baseConfigurationReference = 2AB30A6650F512A913BDB66A /* Pods-SPTuts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SPTuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.webonise.-SPTuts.SPTuts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SPTuts/SPTuts-Bridging-Header.h";
 			};
 			name = Release;
 		};
