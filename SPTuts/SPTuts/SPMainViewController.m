@@ -28,7 +28,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 10;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -50,7 +50,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SPMainTableViewCell"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell no: %ld", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Menu No: %ld", indexPath.row + 1];
     
     return cell;
 }
