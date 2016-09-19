@@ -1,0 +1,6 @@
+framework module Pods_SPTuts {
+  umbrella header "Pods-SPTuts-umbrella.h"
+
+  export *
+  module * { export * }
+}
