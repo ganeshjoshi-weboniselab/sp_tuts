@@ -36,11 +36,21 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.0f;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Menu";
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SPMainTableViewCell"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell no: %ld", indexPath.row];
     
     return cell;
 }
